@@ -1,16 +1,15 @@
 import os.path
+from collections import Counter
 
 import jieba
 import pandas as pd
-from collections import Counter
-
+import torch.nn.functional as F
 from torch import nn
 from torch.utils.data import Dataset, DataLoader, random_split
-import torch.nn.functional as F
 from torch.utils.tensorboard import SummaryWriter
 
-from model import Net
 from config import *
+from model import Net
 
 # 初始化超参数
 config = Config()
